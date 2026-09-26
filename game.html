@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blackjack</title>
+
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+    <main class="game">
+
+        <header class="game-header">
+
+            <div class="game-title">
+                <h1>BLACKJACK</h1>
+                <p id="table-name">QUICK PLAY</p>
+            </div>
+
+            <div class="bankroll-display">
+
+                <span>BANKROLL</span>
+
+                <strong id="bankroll">
+                    $500
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <section class="table">
+
+            <div class="dealer">
+
+                <h2>Dealer</h2>
+
+                <div id="dealer-cards" class="cards"></div>
+
+            </div>
+
+
+            <div class="player">
+
+                <h2>Player</h2>
+
+                <div id="player-cards" class="cards"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             GAME MESSAGE
+        ================================= -->
+
+        <p id="game-message">
+            Place your bet.
+        </p>
+
+
+        <!-- ================================
+             BETTING AREA
+        ================================= -->
+
+        <section class="betting-area">
+
+            <div class="bet-header">
+                <span>BET AMOUNT</span>
+            </div>
+
+
+            <div class="bet-input-row">
+
+                <span class="currency-symbol">$</span>
+
+                <input
+                    type="text"
+                    id="bet-input"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    placeholder="0"
+                    aria-label="Bet amount"
+                >
+
+            </div>
+
+
+            <div class="bet-limits">
+
+                <span>
+                    MIN:
+                    <strong id="min-bet">$1</strong>
+                </span>
+
+                <span>
+                    MAX:
+                    <strong id="max-bet">$20</strong>
+                </span>
+
+            </div>
+
+
+            <div class="quick-bets">
+
+                <button
+                    class="quick-bet-button"
+                    data-bet-type="min"
+                >
+                    MIN
+                </button>
+
+                <button
+                    class="quick-bet-button"
+                    data-bet-type="quarter"
+                >
+                    ¼ MAX
+                </button>
+
+                <button
+                    class="quick-bet-button"
+                    data-bet-type="half"
+                >
+                    ½ MAX
+                </button>
+
+                <button
+                    class="quick-bet-button"
+                    data-bet-type="three-quarter"
+                >
+                    ¾ MAX
+                </button>
+
+                <button
+                    class="quick-bet-button"
+                    data-bet-type="max"
+                >
+                    MAX
+                </button>
+
+                <button
+                    id="clear-bet-button"
+                    class="quick-bet-button clear-button"
+                >
+                    CLEAR
+                </button>
+
+            </div>
+
+
+            <button
+                id="deal-button"
+                class="deal-button"
+            >
+                DEAL
+            </button>
+
+        </section>
+
+
+        <!-- ================================
+             GAME CONTROLS
+        ================================= -->
+
+        <section class="controls">
+
+            <button id="hit-button">
+                Hit <span>[1]</span>
+            </button>
+
+            <button id="stand-button">
+                Stand <span>[2]</span>
+            </button>
+
+            <button id="new-hand-button">
+                New Hand <span>[3]</span>
+            </button>
+
+        </section>
+
+
+        <!-- ================================
+             SETTINGS
+        ================================= -->
+
+        <section class="settings">
+
+            <h3>Settings</h3>
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="auto-next-hand"
+                >
+
+                Automatically go to next hand
+
+            </label>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

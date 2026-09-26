@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #176b3a 0%,
+            #0d4225 45%,
+            #071f13 100%
+        );
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+.campaign {
+    width: 900px;
+    max-width: 92%;
+
+    margin: 0 auto;
+
+    padding: 50px 0 40px;
+}
+
+.campaign-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.campaign-header h1 {
+    font-size: 48px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bankroll {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 12px 30px;
+
+    background: #111;
+
+    border: 3px solid #5a351c;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bankroll span {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.bankroll strong {
+    font-size: 28px;
+}
+
+
+/* TABLES */
+
+.tables {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.table-card {
+    width: 100%;
+
+    min-height: 145px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    text-align: left;
+
+    border: 4px solid #5a351c;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1d7944,
+            #12572f
+        );
+
+    color: white;
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+
+    cursor: pointer;
+}
+
+.table-card.unlocked:hover {
+    transform: translateY(-4px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #23894e,
+            #176b3a
+        );
+
+    box-shadow:
+        0 18px 32px rgba(0, 0, 0, 0.5);
+}
+
+.table-card.unlocked:active {
+    transform: translateY(-1px);
+}
+
+.table-card.locked {
+    background:
+        linear-gradient(
+            145deg,
+            #16482e,
+            #103521
+        );
+
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+.table-card.locked:hover {
+    transform: none;
+}
+
+
+/* TABLE INFO */
+
+.table-info h2 {
+    font-size: 26px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.bet-range {
+    font-size: 19px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.entry {
+    font-size: 15px;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* PLAY / LOCKED */
+
+.play-button,
+.locked-text {
+    min-width: 110px;
+
+    padding: 13px 18px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.play-button {
+    background: #222;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.35);
+}
+
+.locked-text {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    display: block;
+
+    margin: 35px auto 0;
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.35);
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.back-button:hover {
+    background: #444;
+
+    transform: translateY(-2px);
+}
+
+
+/* RESET BUTTON */
+
+.reset-button {
+    display: block;
+
+    margin: 12px auto 0;
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #7a2020;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.35);
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.reset-button:hover {
+    background: #a12b2b;
+
+    transform: translateY(-2px);
+}
+
+.reset-button:active {
+    transform: translateY(0);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .campaign {
+        padding-top: 30px;
+    }
+
+    .campaign-header h1 {
+        font-size: 36px;
+
+        letter-spacing: 6px;
+    }
+
+    .table-card {
+        min-height: 125px;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+    }
+
+    .play-button,
+    .locked-text {
+        width: 100%;
+    }
+
+}

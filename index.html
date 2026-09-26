@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blackjack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="home">
+
+        <h1>BLACKJACK</h1>
+
+        <p class="subtitle">Choose your game mode</p>
+
+        <div class="mode-container">
+
+            <button class="mode-card" id="multiplayer-button">
+
+                <h2>MULTIPLAYER</h2>
+
+                <p>
+                    Play with multiple people on one laptop.
+                </p>
+
+            </button>
+
+
+            <button class="mode-card" id="quick-play-button">
+
+                <h2>QUICK PLAY</h2>
+
+                <p>
+                    Start with a set amount of money that resets when you reopen the game.
+                </p>
+
+            </button>
+
+
+            <button class="mode-card" id="campaign-button">
+
+                <h2>CAMPAIGN</h2>
+
+                <p>
+                    Build your bankroll and save your progress between sessions.
+                </p>
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        // ================================
+        // QUICK PLAY
+        // ================================
+
+        document
+            .getElementById("quick-play-button")
+            .addEventListener("click", function () {
+
+                // Tell the game that this is Quick Play
+                sessionStorage.setItem(
+                    "gameMode",
+                    "quickplay"
+                );
+
+                // Open the Blackjack game
+                window.location.href = "game.html";
+
+            });
+
+
+        // ================================
+        // MULTIPLAYER
+        // ================================
+
+        document
+            .getElementById("multiplayer-button")
+            .addEventListener("click", function () {
+
+                alert("Multiplayer coming soon!");
+
+            });
+
+
+        // ================================
+        // CAMPAIGN
+        // ================================
+
+        document
+            .getElementById("campaign-button")
+            .addEventListener("click", function () {
+
+                window.location.href = "campaign.html";
+
+            });
+
+    </script>
+
+</body>
+
+</html>

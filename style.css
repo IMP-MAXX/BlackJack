@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #176b3a 0%,
+            #0d4225 45%,
+            #071f13 100%
+        );
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+.home {
+    width: 1000px;
+    max-width: 90%;
+
+    text-align: center;
+}
+
+h1 {
+    font-size: 64px;
+    letter-spacing: 12px;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 20px;
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    margin-bottom: 50px;
+}
+
+.mode-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.mode-card {
+    min-height: 260px;
+
+    padding: 35px 25px;
+
+    border: 3px solid #5a351c;
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1d7944,
+            #12572f
+        );
+
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+.mode-card:hover {
+    transform: translateY(-8px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #23894e,
+            #176b3a
+        );
+
+    box-shadow:
+        0 22px 40px rgba(0, 0, 0, 0.55);
+}
+
+.mode-card:active {
+    transform: translateY(-3px);
+}
+
+.mode-card h2 {
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.mode-card p {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 800px) {
+
+    h1 {
+        font-size: 45px;
+        letter-spacing: 7px;
+    }
+
+    .mode-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mode-card {
+        min-height: 180px;
+    }
+
+}
